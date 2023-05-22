@@ -67,6 +67,7 @@ Let's try some curl commands...
 
 <br>
 For example: <br>
+
 ```
 curl http://localhost:8082/v3/clusters
 curl http://localhost:8082/topics
