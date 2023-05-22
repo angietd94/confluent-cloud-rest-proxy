@@ -1,8 +1,12 @@
-# confluent-cloud-rest-proxy
+## Demo: Self-managed REST Proxy with Confluent Cloud
 <br>
 Let's try to host REST Proxy in localhost and make it work with CC.
 <br>
 # DISCLAIMER: THIS IS A SUPER SIMPLE EXAMPLE, not really useful for production etc. <br>
+<br>
+# Scenario: <br>
+- hosting Confluent Platform in my local machine, with Docker. <br>
+- Taking into advtange REST PROXY for sending messages to a topic in Confluent Cloud.
 <br>
 
 Good inspo from these links! <br>
