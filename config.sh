@@ -8,7 +8,7 @@ export ORG_ID="****"
 export ENVID="***"
 
 
-export CLUSTERID="lkc-mvokz2"
+export CLUSTERID="lkc-****"
 ##only needed if creating a new cluster
 #export CLUSTERTYPE="basic"
 #export CLUSTERNAME="self-managed-demo"
