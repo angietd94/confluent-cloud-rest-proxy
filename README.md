@@ -68,6 +68,11 @@ chmod +x ccloud-generate-cp-configs.sh
   "doc": "Sample schema to help you get started.",
   "fields": [
     {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "doc": "The string is a unicode character sequence.",
       "name": "name",
       "type": "string"
     }
