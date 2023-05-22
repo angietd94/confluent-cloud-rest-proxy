@@ -1,6 +1,16 @@
 # confluent-cloud-rest-proxy
+<br>
 Let's try to host REST Proxy in localhost and make it work with CC.
-DISCLAIMER: THIS IS A SUPER SIMPLE EXAMPLE, not really useful for production etc. <br>
+<br>
+# DISCLAIMER: THIS IS A SUPER SIMPLE EXAMPLE, not really useful for production etc. <br>
+<br>
+
+Good inspo from these links! <br>
+
+https://www.confluent.io/es-es/blog/a-comprehensive-rest-proxy-for-kafka/ <br>
+https://github.com/confluentinc/kafka-rest <br>
+https://docs.confluent.io/platform/current/kafka-rest/api.html#rest-api-usage-examples <br>
+<br>                    
 <br>
 Detailed video of every step here:<br>
 ----> 
