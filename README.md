@@ -1,14 +1,14 @@
-## Demo: Self-managed REST Proxy with Confluent Cloud
+# Demo: Self-managed REST Proxy with Confluent Cloud
 <br>
 Let's try to host REST Proxy in localhost and make it work with CC.
 <br>
-# DISCLAIMER: THIS IS A SUPER SIMPLE EXAMPLE, not really useful for production etc. <br>
+## DISCLAIMER: THIS IS A SUPER SIMPLE EXAMPLE, not really useful for production etc. <br>
 
 If you want a kubernetes example by Confluent <br>
 https://github.com/confluentinc/confluent-kubernetes-examples/tree/master/hybrid/ccloud-integration
 <br>
 <br>
-# Scenario: <br>
+## Scenario: <br>
 - hosting Confluent Platform in my local machine, with Docker. <br>
 - Taking into advtange REST PROXY for sending messages to a topic in Confluent Cloud.
 <br>
@@ -123,7 +123,7 @@ If good it will give 200 OK<br>
 
 <br>
 
-## Errors examples
+# Errors examples
 <br>
 Comprehensive guide can be found in https://docs.confluent.io/platform/current/kafka-rest/api.html and other documentations.
 Summizing you will get errors like: <br>
@@ -132,14 +132,14 @@ Summizing you will get errors like: <br>
 
 
 <br>
-# EXAMPLE WRONG DATA: name field wrong in the schema <br>
+## EXAMPLE WRONG DATA: name field wrong in the schema <br>
 
 ```
 curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"nombre\",\"type\":\"string\"}]}","records":[{"value":{"name":"angelica","age":29}}]}' 
 ```
 
 <br>
-# EXAMPLE WRONG DATA: name field wrong in the schema AND in the data  <br>
+## EXAMPLE WRONG DATA: name field wrong in the schema AND in the data  <br>
 
 ```
 curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"nombre\",\"type\":\"string\"}]}","records":[{"value":{"nombre":"angelica","age":29}}]}' 
@@ -148,10 +148,9 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 ![IMAGE_DESCRIPTION](img/error.png)<br>
 
 
-![IMAGE_DESCRIPTION]
 
 <br>
-# Case: Name is an int and not a string
+## Case: Name is an int and not a string
 
 <br>
 
@@ -162,7 +161,7 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 ![IMAGE_DESCRIPTION](img/namewrong.png)<br>
 
 
-# OR if missing data...
+## OR if missing data...
 
 ```
 curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"age":29}}]}' 
@@ -174,21 +173,21 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 ![IMAGE_DESCRIPTION](img/missing data.png)<br>
 
 
-# Example: SampleRecord missing!
+## Example: SampleRecord missing!
 
 ```
 curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"age":29}}]}' 
 ```
 ![IMAGE_DESCRIPTION](img/samplerecordmissing.png)<br>
 
-# Example: Topic not found / wrong topic name
+## Example: Topic not found / wrong topic name
 
 curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"name":"angelica","age":29}}]}' 
 
 
 
 
-## Examples with mock data
+# Examples with mock data
 
 In the other parts of the video I basically just made ChatGPT make the work by creating some mock data similar to this. <br>
 The first time is working fine and in the second you see some errors. Not really relevant just an example.
