@@ -139,7 +139,7 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 ```
 
 
-![IMAGE_DESCRIPTION](img/error1.png)<br>
+![IMAGE_DESCRIPTION]
 
 <br>
 # Case: Name is an int and not a string
