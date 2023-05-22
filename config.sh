@@ -1,15 +1,11 @@
 #!/bin/sh
-export CONFLUENT_USERNAME="ataccadughetti+ubb@confluent.io"
-export CONFLUENT_PASSWORD="***"
+
 #CLOUD API KEYS
 
-export CLOUD_KEY="XHLDXYZXUVJEKAEK"
-export CLOUD_SECRET="iAmpwYBClKWi4/KQSqw6Cz60/IWXg5cixIiUcplriz//RYRYt1Tmjx2c/sIPm/E1
-D2X8I5Nj6PZk1tYFUirfdxo9793hyU0Sbaw1GSEwH/GF7IZzyaEyl9RFzs+z1reo"
-export ORG_ID="6567aa66-3926-4012-8364-9051f660cef8"
-export ENVID="env-rrr650"
-export EMAIL=""
-export ACCOUNTPW=""
+export CLOUD_KEY="****"
+export CLOUD_SECRET="****"
+export ORG_ID="****"
+export ENVID="***"
 
 
 export CLUSTERID="lkc-mvokz2"
@@ -20,16 +16,16 @@ export CLUSTERID="lkc-mvokz2"
 #Either us, eu
 export GEO="eu"
 export REGION="eu-central-1"
-export CONFLUENT_REST_URL="https://pkc-zpjg0.eu-central-1.aws.confluent.cloud:443"
-export CLUSTERAPIKEY="URXPXUAHDVBAOAEZ"
-export CLUSTERAPISECRET="D2X8I5Nj6PZk1tYFUirfdxo9793hyU0Sbaw1GSEwH/GF7IZzyaEyl9RFzs+z1reo"
+export CONFLUENT_REST_URL="https://*****.aws.confluent.cloud:443"
+export CLUSTERAPIKEY="***"
+export CLUSTERAPISECRET="****"
 
 export CLOUDPROVIDER="aws"
 
-export SR_API_KEY="FBCFSJAUYYGN47FR"
-export SR_API_SECRET="I/dnygHuuamZvj0VwACCN+WmFCZunxnQJVLLqUzH8AMbocCneTFO2AvUI8nyZbIF"
-export BOOTSTRAP_SERVERS="pkc-zpjg0.eu-central-1.aws.confluent.cloud:9092"
-export SCHEMA_REGISTRY_URL="https://psrc-8vyvr.eu-central-1.aws.confluent.cloud"
+export SR_API_KEY="****"
+export SR_API_SECRET="****"
+export BOOTSTRAP_SERVERS="****.eu-central-1.aws.confluent.cloud:9092"
+export SCHEMA_REGISTRY_URL="https://*****.eu-central-1.aws.confluent.cloud"
 
 
 export SASL_JAAS_CONFIG="org.apache.kafka.common.security.plain.PlainLoginModule required username=$CLUSTERAPIKEY password=$CLUSTERAPISECRET;"
@@ -37,11 +33,3 @@ export SASL_JAAS_CONFIG_PROPERTY_FORMAT="org.apache.kafka.common.security.plain.
 export REPLICATOR_SASL_JAAS_CONFIG="org.apache.kafka.common.security.plain.PlainLoginModule required username=$CLUSTERAPIKEY' password=$CLUSTERAPISECRET;"
 export BASIC_AUTH_CREDENTIALS_SOURCE="USER_INFO"
 export SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO=$SR_API_KEY:$SR_API_SECRET
-
-## CLICKHOUSE DATA
-
-export TOPIC="rest_proxy_example"
-export DATABASE_NAME="default"
-export DATABASE_PASSWORD="egNKoxgICWr~8"
-export DATABASE_HOSTNAME="uzkee0x1rb.eu-west-1.aws.clickhouse.cloud"
-export CLICKHOUSE_HOSTNAME=""
