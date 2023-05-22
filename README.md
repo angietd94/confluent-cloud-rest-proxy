@@ -130,10 +130,10 @@ Summizing you will get errors like: <br>
 
 ![IMAGE_DESCRIPTION](img/errortypes.png)<br>
 
-
+In this guide, check https://github.com/angietd94/confluent-cloud-rest-proxy/blob/main/restproxy_commands.sh . <br> 
 <br>
 
-## EXAMPLE WRONG DATA: name field wrong in the schema 
+## Error 422 Example wrong data: name field wrong in the schema 
 
 <br>
 
@@ -142,7 +142,7 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 ```
 
 <br>
-## EXAMPLE WRONG DATA: name field wrong in the schema AND in the data  
+## Error 422 Example wrong data: name field wrong in the schema AND in the data  
 
 <br>
 
@@ -152,10 +152,19 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 ```
 ![IMAGE_DESCRIPTION](img/error.png)<br>
 
+## Error 422 Example: SampleRecord missing!
 
+```
+curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"age":29}}]}' 
+```
+
+![IMAGE_DESCRIPTION](img/samplerecordmissing.png)<br>
+<br>
+<br>
 
 <br>
-## Case: Name is an int and not a string
+
+## Error 400 Example: Name is an int and not a string
 
 <br>
 
@@ -166,7 +175,7 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 ![IMAGE_DESCRIPTION](img/namewrong.png)<br>
 
 
-## OR if missing data...
+## Error 400: OR if missing data...
 
 ```
 curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"age":29}}]}' 
@@ -178,25 +187,7 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 ![IMAGE_DESCRIPTION](img/missingdata.png)<br>
 
 <br>
-<br>
-<br>
 
-## Example: SampleRecord missing!
-
-```
-curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"age":29}}]}' 
-```
-
-![IMAGE_DESCRIPTION](img/samplerecordmissing.png)<br>
-<br>
-<br>
-
-## Example: Topic not found / wrong topic name
-
-```
-curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"name":"angelica","age":29}}]}' 
-
-```
 
 
 <br>
