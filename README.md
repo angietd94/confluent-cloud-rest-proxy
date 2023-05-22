@@ -110,8 +110,68 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 
 
 If good it will give 200 OK<br>
-![IMAGE_DESCRIPTION](img/ok.png)<br>
+![IMAGE_DESCRIPTION](img/messageok.png)<br>
+
+<br> And in Confluent Cloud: <br>
+![IMAGE_DESCRIPTION](img/ccok.png)<br>
+
+
+<br>
+
+## Errors examples
+<br>
+# EXAMPLE WRONG DATA: name field wrong in the schema <br>
+
+```
+curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"nombre\",\"type\":\"string\"}]}","records":[{"value":{"name":"angelica","age":29}}]}' 
+```
+
+<br>
+# EXAMPLE WRONG DATA: name field wrong in the schema AND in the data  <br>
+
+```
+curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"nombre\",\"type\":\"string\"}]}","records":[{"value":{"nombre":"angelica","age":29}}]}' 
+<br>
+```
+
+
+![IMAGE_DESCRIPTION](img/error1.png)<br>
+
+<br>
+# Case: Name is an int and not a string
+
+<br>
+
+```
+curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"nombre":30,"age":29}}]}' 
+
+```
+
+
+OR if missing data...
+
+```
+curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"age":29}}]}' 
+```
+
+
+<br>
+![IMAGE_DESCRIPTION](img/namewrong.png)<br>
+
+![IMAGE_DESCRIPTION](img/missingdata.png)<br>
+
+
+Example: SampleRecord missing!
+
+curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"age":29}}]}' 
+
+![IMAGE_DESCRIPTION](img/samplerecordmissing.png)<br>
+
+
+
+## Examples with mock data
 
 In the other parts of the video I basically just made ChatGPT make the work by creating some mock data similar to this. <br>
-The first time is working fine and in the second you see some errors.
+The first time is working fine and in the second you see some errors. Not really relevant just an example.
 <br>
+
