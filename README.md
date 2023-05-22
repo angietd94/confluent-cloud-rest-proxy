@@ -137,6 +137,7 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"nombre\",\"type\":\"string\"}]}","records":[{"value":{"nombre":"angelica","age":29}}]}' 
 <br>
 ```
+![IMAGE_DESCRIPTION](img/error1.png)<br>
 
 
 ![IMAGE_DESCRIPTION]
