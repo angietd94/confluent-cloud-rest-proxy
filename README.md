@@ -171,7 +171,7 @@ curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept
 
 <br>
 
-![IMAGE_DESCRIPTION](img/missingdata.png)<br>
+![IMAGE_DESCRIPTION](img/missing data.png)<br>
 
 
 # Example: SampleRecord missing!
