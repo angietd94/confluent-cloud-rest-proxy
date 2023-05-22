@@ -16,9 +16,12 @@ https://github.com/confluentinc/kafka-rest <br>
 https://docs.confluent.io/platform/current/kafka-rest/api.html#rest-api-usage-examples <br>
 <br>                    
 <br>
-Detailed video of every step here:<br>
+## Detailed video of every step here:<br>
 ----> 
 
+https://drive.google.com/file/d/1uh-MYKVAOFPCmMYWZnNLR3vbl6dsZeyX/view?usp=sharing
+
+<br>
 
 <br>
 First clone the git repo, and enter in the folder:
