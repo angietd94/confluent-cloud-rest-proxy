@@ -124,6 +124,13 @@ If good it will give 200 OK<br>
 
 ## Errors examples
 <br>
+Comprehensive guide can be found in https://docs.confluent.io/platform/current/kafka-rest/api.html and other documentations.
+Summizing you will get errors like: <br>
+
+![IMAGE_DESCRIPTION](img/errortypes.png)<br>
+
+
+<br>
 # EXAMPLE WRONG DATA: name field wrong in the schema <br>
 
 ```
