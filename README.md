@@ -19,13 +19,7 @@ https://www.confluent.io/es-es/blog/a-comprehensive-rest-proxy-for-kafka/ <br>
 https://github.com/confluentinc/kafka-rest <br>
 https://docs.confluent.io/platform/current/kafka-rest/api.html#rest-api-usage-examples <br>
 <br>                    
-<br>
-## Detailed video of every step here:<br>
-----> 
 
-https://drive.google.com/file/d/1uh-MYKVAOFPCmMYWZnNLR3vbl6dsZeyX/view?usp=sharing
-
-<br>
 
 <br>
 First clone the git repo, and enter in the folder:
@@ -44,6 +38,16 @@ Then change the values in config.sh depending on your own account. <br>
 You can find the description on how to find all values in this repo: <br>
 https://github.com/angietd94/confluent-cloud-hybrid-demo <br>
 Where also it is explained how to launch the script in the "Second part: Launching the script! " but basically this is just to have CP running (AND THEN REST PROXY included).
+
+
+<br>
+## Detailed video of every step here:<br>
+----> 
+
+https://drive.google.com/file/d/1uh-MYKVAOFPCmMYWZnNLR3vbl6dsZeyX/view?usp=sharing
+
+<br>
+
 
 That basically is summaryzing: <br>
 ```
