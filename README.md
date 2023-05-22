@@ -3,6 +3,10 @@
 Let's try to host REST Proxy in localhost and make it work with CC.
 <br>
 # DISCLAIMER: THIS IS A SUPER SIMPLE EXAMPLE, not really useful for production etc. <br>
+
+If you want a kubernetes example by Confluent <br>
+https://github.com/confluentinc/confluent-kubernetes-examples/tree/master/hybrid/ccloud-integration
+<br>
 <br>
 # Scenario: <br>
 - hosting Confluent Platform in my local machine, with Docker. <br>
