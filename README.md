@@ -34,7 +34,8 @@ cd confluent-cloud-hybrid-demo
 
 ##  Second part: Setting up CP on localhost with Docker! (REST PROXY IS INCLUDED) <br>
 
-Then change the values in config.sh depending on your own account. <br>
+*NOTE: first change the values in config.sh depending on your own account.* <br>
+<br>
 You can find the description on how to find all values in this repo: <br>
 https://github.com/angietd94/confluent-cloud-hybrid-demo <br>
 Where also it is explained how to launch the script in the "Second part: Launching the script! " but basically this is just to have CP running (AND THEN REST PROXY included).
