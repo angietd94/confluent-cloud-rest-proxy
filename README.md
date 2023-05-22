@@ -74,9 +74,12 @@ curl http://localhost:8082/topics/rest_proxy_example | jq
 ```
 
 A sample message that will work here: <br>
+
 ```
 curl -i -X POST -H "Content-Type: application/vnd.kafka.avro.v2+json" -H "Accept: application/vnd.kafka.v2+json"  --url "http://localhost:8082/topics/rest_proxy_example" --data '{"value_schema": "{\"type\": \"record\", \"name\": \"sampleRecord\", \"doc\":\"Sample schema to help you get started.\", \"namespace\":\"com.mycorp.mynamespace\",\"fields\":[{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}","records":[{"value":{"name":"angelica","age":29}}]}' 
 ```
+
+
 If good it will give 200 OK<br>
 ![IMAGE_DESCRIPTION](img/ok.png)<br>
 
