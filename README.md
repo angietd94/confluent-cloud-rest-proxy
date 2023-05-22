@@ -41,6 +41,7 @@ chmod +x ccloud-generate-cp-configs.sh
 <br>
 - Let's create the topic (here rest_proxy_example, and put a simple schema AVRO, for example having a name and age of someone:
 <br>
+
 ```
 {
   "doc": "Sample schema to help you get started.",
@@ -55,6 +56,7 @@ chmod +x ccloud-generate-cp-configs.sh
   "type": "record"
 }
 ```
+
 <br>
 
 Is it all up and running in Docker? GOOD! <br>
